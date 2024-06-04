@@ -1,6 +1,6 @@
 from pyrogram import Client
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
-from AnonXMusic import app
+from ANNIEMUSIC import app
 import os
 
 
@@ -19,6 +19,6 @@ async def WelcomeDev(_, response: ChatMemberUpdated):
             chat_id=response.chat.id,
             reply_markup=markup,
             photo="downloads/developer.jpg", 
-            caption=f"- الحق عمري مبرمج السورس {name} دخل الشات.\n- {bio}"
+            caption=f"- وسع وسع عمك {name} دخل الشات.\n- {bio}"
         )
     

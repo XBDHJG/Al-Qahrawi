@@ -9,7 +9,7 @@ SUPPORT_CHAT = "SOURCE_MARVEN"
 @app.on_message(filters.command(['امنية','امنيه'], prefixes=""))
 async def wish(_, m):
     if len(m.command) < 2:
-        await m.reply("اضفني لجروبك❤")
+        await m.reply("اضفني لجروبك🥀!")
         return 
 
     api = requests.get("https://nekos.best/api/v2/happy").json()
@@ -30,7 +30,7 @@ async def wish(_, m):
             
     
 BUTTON = [[InlineKeyboardButton("𝐒𝐨𝐔𝐫𝐂𝐞 𝐌𝐚𝐑𝐯𝐄𝐧", url=f"https://t.me/{SUPPORT_CHAT}")]]
-CUTIE = "https://telegra.ph/file/a802b499e948f16662dbc.jpg"
+CUTIE = "https://64.media.tumblr.com/d701f53eb5681e87a957a547980371d2/tumblr_nbjmdrQyje1qa94xto1_500.gif"
 
 @app.on_message(filters.command(['نسبه الغلب','غلبان'], prefixes=""))
 async def cute(_, message):

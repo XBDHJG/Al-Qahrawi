@@ -2,13 +2,12 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from AnonXMusic import app
 import config
-from AnonXMusic import app
 
-@app.on_message(filters.command("المطور", "مطور"))
+@app.on_message(filters.command("المطور", ""))
 async def maker(client: Client, message: Message):
     await message.reply_photo(
-        photo="https://telegra.ph/file/a802b499e948f16662dbc.jpg",
-        caption="ᵂᴱᴸᶜᴼᴹᴱ ᵀᴼ ˢᴼᵁᴿᶜᴱ ᴹᴬᴿⱽᴱᴺ ༈༉",
+        photo="https://telegra.ph/file/d7f84f3abf21196ccd7e5.jpg",
+        caption="𝐒𝐨𝐔𝐫𝐂𝐞 𝐌𝐚𝐑𝐯𝐄𝐧",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
