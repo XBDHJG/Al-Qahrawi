@@ -4,23 +4,23 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from AnonXMusic import app
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import (
+from ANNIEMUSIC import app
+from ANNIEMUSIC.misc import SUDOERS
+from ANNIEMUSIC.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from AnonXMusic.utils.decorators.language import language
-from AnonXMusic.utils.formatters import alpha_to_int
+from ANNIEMUSIC.utils.decorators.language import language
+from ANNIEMUSIC.utils.formatters import alpha_to_int
 from config import adminlist
 
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command("broadcast") & SUDOERS)
+@app.on_message(filters.command("اذاعه", prefixes="") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
@@ -32,15 +32,15 @@ async def braodcast_message(client, message, _):
             return await message.reply_text(_["broad_2"])
         query = message.text.split(None, 1)[1]
         if "-pin" in query:
-            query = query.replace("-pin", "")
+            query = query.replace("بالتثبيت", "")
         if "-nobot" in query:
             query = query.replace("-nobot", "")
         if "-pinloud" in query:
-            query = query.replace("-pinloud", "")
+            query = query.replace("فوق", "")
         if "-assistant" in query:
-            query = query.replace("-assistant", "")
+            query = query.replace("بالمساعد", "")
         if "-user" in query:
-            query = query.replace("-user", "")
+            query = query.replace("للمستخدمين", "")
         if query == "":
             return await message.reply_text(_["broad_8"])
 
@@ -117,7 +117,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_5"])
         text = _["broad_6"]
-        from AnonXMusic.core.userbot import assistants
+        from ANNIEMUSIC.core.userbot import assistants
 
         for num in assistants:
             sent = 0
