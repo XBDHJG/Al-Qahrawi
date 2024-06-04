@@ -29,16 +29,18 @@ import config
 from strings import get_string
 from AnonXMusic import LOGGER, YouTube, app
 from AnonXMusic.misc import db
-from AnonXMusic.utils.database import (add_active_chat,
-                                       add_active_video_chat,
-                                       get_assistant,
-                                       get_audio_bitrate, get_lang,
-                                       get_loop, get_video_bitrate,
-                                       group_assistant, is_autoend,
-                                       music_on, mute_off,
-                                       remove_active_chat,
-                                       remove_active_video_chat,
-                                       set_loop)
+from AnonXMusic.utils.database import (
+    add_active_chat,
+    add_active_video_chat,
+    get_lang,
+    get_loop,
+    group_assistant,
+    is_autoend,
+    music_on,
+    remove_active_chat,
+    remove_active_video_chat,
+    set_loop,
+)
 from AnonXMusic.utils.exceptions import AssistantErr
 from AnonXMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
